@@ -6,7 +6,7 @@ This will be your portfolio repository. Use this as a [template repository](http
 
 ### obligitory teemo picture:
 
-[](https://media.sketchfab.com/models/0605ac1c28a54ee78be35f314c99e5ec/thumbnails/c548828645254854890c139106998648/0fed43bc7af146ce970596043e07c2b5.jpeg)
+<img src="assets/teemo.jpg" alt="Teemo picture" width="200">
 
 
 # Table of Contents
