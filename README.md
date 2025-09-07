@@ -10,4 +10,4 @@ This will be your portfolio repository. Use this as a [template repository](http
 
 
 # Table of Contents
-[Link to Assignment 1](assignments/assignment1.md)
+[Link to Assignment 1](assignments/assignment1/contents.md)
