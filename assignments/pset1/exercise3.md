@@ -31,4 +31,6 @@ I would change the GitHub documentation to more thoroughly explain that tokens a
 
 I used generic parameters User and Resource to write this concept spec to work in any context (not just GitHub). I was a bit unsure if I should use the entire User or just a username, since things like github only need the username and token to access things (i think).
 
+Also, it is possible to easily add on to this concept the idea of public/private resources similar to GitHubs behavior with public/private repos. However, I didn't include it since it makes this concept more applicable to a wider range of contexts.
+
 [back to table of contents](/assignments/pset1/contents.md)

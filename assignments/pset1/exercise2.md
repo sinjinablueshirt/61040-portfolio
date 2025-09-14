@@ -37,6 +37,7 @@
 
 ## Notes
 
+1. my thought process was that when a user registers, the User is created bu cannot be authenticated until it is confirmed. This behavior is achieved by making the confirmed flag false when User is first created and only turned true when the confirm action succeeds
 
 
 [back to table of contents](/assignments/pset1/contents.md)
