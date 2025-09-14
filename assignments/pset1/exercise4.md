@@ -66,7 +66,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;**effects** updates the flight information for all passengers booked for flight. for each of those passengers, creates and saves a new boarding pass to go in the passengers' digital wallets.
 
 &nbsp;&nbsp;cancelBooking(id: String, flight: Flight)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**requires** a passenger with id is booked for flight
+&nbsp;&nbsp;&nbsp;&nbsp;**requires** a passenger with id is booked for flight <br>
 &nbsp;&nbsp;&nbsp;&nbsp;**effects** removes passenger from flight. Remove the corresponding boarding pass from the passenger's wallet
 
 
