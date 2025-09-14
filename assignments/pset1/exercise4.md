@@ -91,7 +91,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;**effects** creates and saves a new client with username and address
 
 &nbsp;&nbsp;changeAddress(username: String, newAddress: Address) <br>
-&nbsp;&nbsp;&nbsp;&nbsp;**requires** A client already exists with the same username and a different address
+&nbsp;&nbsp;&nbsp;&nbsp;**requires** A client already exists with the same username and a different address <br>
 &nbsp;&nbsp;&nbsp;&nbsp;**effects** changes the client's address to newAddress
 
 &nbsp;&nbsp;verify(username: String, address: Address) <br>
