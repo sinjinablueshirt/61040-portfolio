@@ -86,12 +86,14 @@ This feature has one major issue that is how we handle who can access URL analyt
 I'm not really sure what this means by "not easily guessed". I assume that it means using random strings for the short URLs like "jbIAOJSbfiojjas". In this case, the only thing we'd really have to do is specify that the implementation of NonceGeneration generates random unique strings. If we wanted to, we could additionally change the concept spec to be more narrow by specifically stating that it generates "random, unique strings" instead of just "unique strings".
 
 ### Supporting reporting of analytics to creators of short URLs who have not registered as user
-I think that this could definitely be easily added to the system by simply removing much of the ResourceOwner concept. However, I would personally not add it. I think that conceptually and in practice there is no reason for other users to have access to this information. It exposes too m uch unwanted/unneeded information, so I woukd not include it.
+I would personally not add this. I think that this could definitely be easily added to the system by simply removing much of the ResourceOwner concept. However, I think that conceptually and in practice there is no reason for other users to have access to this information. It exposes too much unwanted/unneeded information, so I woukd not include it.
 
 
 ## Notes
 1. For [sync 2](#sync-2-see-notes), I understood the instructions "one when shortenings are translated to targets" as a sync that occurs when a user visits the URL and we need to track the data
 
 2. For [sync 3](#sync-31-and-sync-32-see-notes), I wasn't sure how the user examining analytics would be initiated so I did something similar to the generate and register syncs from the Sync Questions section. I know the instructions said 3 syncs but I figured splitting this one would make it more clear. Sync 3.1 basically waits for an examineAnalytics request and then sends a query to check if the user is the owner of the Url. Then sync 3.2 waits for this call to succeed and if it does then it will return the analytics of the URL. These syncs could also be easily combined into one.
+
+3. I chose to seperate the two concepts ResourceCounter and ResourceOwner because I figured that it would be good for modularity for them to be defined as two different concepts with different purposes. ResourceCounter keeps track of information while ResourceOwner is more used for authentication
 
 [back to table of contents](/assignments/pset2/contents.md)
