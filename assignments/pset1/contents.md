@@ -1,4 +1,4 @@
-# Assignment 2
+# Problem Set 1
 [Back to README](/README.md)
 
 ## Table of Contents (click to go to section)
