@@ -11,7 +11,7 @@
 **state**\
 &nbsp;&nbsp;a set of User with\
 &nbsp;&nbsp;&nbsp;&nbsp;a username String\
-&nbsp;&nbsp;&nbsp;&nbsp;a password String\
+&nbsp;&nbsp;&nbsp;&nbsp;a password String
 
 **actions**\
 &nbsp;&nbsp;register(username: String, password: String): User\
@@ -71,13 +71,13 @@
 
 **purpose** to associate resources with an owner so that control and accountability are clearly designated.
 
-**principle** users can save resources with a description and be the designated owner of that resource. They can then change the details relating to the resource.
+**principle** users can save resources with a description and be the designated owner of that resource. They can then change the details relating to the resource or delete its record.
 
 **state**\
 &nbsp;&nbsp;a set of Record with\
 &nbsp;&nbsp;&nbsp;&nbsp;an owner User\
 &nbsp;&nbsp;&nbsp;&nbsp;a resource Resource\
-&nbsp;&nbsp;&nbsp;&nbsp;a description String\
+&nbsp;&nbsp;&nbsp;&nbsp;a description String
 
 **actions**\
 &nbsp;&nbsp;loadResource(resource: Resource, owner: User, description: String): (record: Record)\
