@@ -12,3 +12,5 @@
 [Link to Problem Set 1](assignments/pset1/contents.md)
 
 [Link to Problem Set 2](/assignments/pset2/contents.md)
+
+[Link to Assignment 2](/assignments/assignment2/contents.md)
