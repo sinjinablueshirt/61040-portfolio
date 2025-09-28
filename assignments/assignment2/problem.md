@@ -17,9 +17,9 @@ A major problem in the domain of music making (specifically music writing), is t
 
 3. **Novice Composers** are a subset of the Composers who are newer to composing music and may particularly have a hard time getting feedback due to lack of confidence, knowledge, or connections.
 
-4. **Instrumentalists** are those who may play the music made by the Composers
+4. **Instrumentalists** are those who may play the music made by the Composers who would benefit from having more fleshed out music
 
-5. **Music Audiences** are those who listen to the music made by the Composers
+5. **Music Audiences** are those who listen to the music made by the Composers who would benefit from having better quality music to listen to
 
 
 ## Evidence

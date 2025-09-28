@@ -9,3 +9,5 @@
 [Concept Design](/assignments/assignment2/concepts.md)
 
 [UI Sketches](/assignments/assignment2/sketches.md)
+
+[User Journey](/assignments/assignment2/journey.md)

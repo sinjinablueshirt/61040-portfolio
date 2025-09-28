@@ -13,7 +13,7 @@
 ## Search Page
 ![alt text](/assets/search.jpeg)
 
-- Once a user conducts a search, they will be nagivated to this page
+- Once a user conducts a search, they will be navigated to this page
 - at the top, they can see in the search bar what they just searched for and also continue to use it to make more searches
 - below it, the search results will be listed. The results will each display the music title, composer, description, and tags
 - clicking on any of these results will navigate the user to the Feedback page for that piece of music

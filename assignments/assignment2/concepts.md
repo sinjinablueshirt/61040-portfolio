@@ -50,7 +50,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;**requires** object is registered\
 &nbsp;&nbsp;&nbsp;&nbsp;**effects** returns the tags set of the object
 
-&nbsp;&nbsp;matchLabels(labels: set of String): (objects: set of Object)\
+&nbsp;&nbsp;matchTags(tags: set of String): (objects: set of Object)\
 &nbsp;&nbsp;&nbsp;&nbsp;**requires** true\
 &nbsp;&nbsp;&nbsp;&nbsp;**effects** returns the set of Objects that have AT LEAST ALL the passed in tags in their tags set
 
@@ -71,6 +71,10 @@
 &nbsp;&nbsp;loadResource(resource: Resource, owner: User, description: String): (project: Project)\
 &nbsp;&nbsp;&nbsp;&nbsp;**requires** true\
 &nbsp;&nbsp;&nbsp;&nbsp;**effects** creates and saves a new project with resource, owner, and description. Returns the newly made project
+
+&nbsp;&nbsp;changeProject(project: Project, resource: Resource, description: String)\
+&nbsp;&nbsp;&nbsp;&nbsp;**requires** true\
+&nbsp;&nbsp;&nbsp;&nbsp;**effects** changes project's resource and description to the ones passed in
 
 &nbsp;&nbsp;owned(user: User): (projects: set of Project)\
 &nbsp;&nbsp;&nbsp;&nbsp;**requires** true\
@@ -95,7 +99,7 @@
 
 &nbsp;&nbsp;a set of Comment with\
 &nbsp;&nbsp;&nbsp;&nbsp;a text String\
-&nbsp;&nbsp;&nbsp;&nbsp;a commenter User
+&nbsp;&nbsp;&nbsp;&nbsp;a commenter User\
 &nbsp;&nbsp;&nbsp;&nbsp;a dateTime
 
 **actions**\
@@ -142,7 +146,7 @@
 
 **sync** searchMusic\
 **when** Request.search(tags)\
-**then** TagSearch.matchLabel(tags+{"public"}) [see notes](#additional-notes)
+**then** TagSearch.matchTags(tags+{"public"}) [see notes](#additional-notes)
 
 **sync** getMusicDetails\
 **when**\
@@ -179,6 +183,10 @@
 &nbsp;&nbsp;Request.makePrivate()\
 &nbsp;&nbsp;ResourceOwnership.check(): (music)\
 **then** TagSearch.removeTag(object: music, {"public"})
+
+**sync** editMusic\
+**when** Request.editMusic(music, file, description)\
+**then** ResourceOwnership.changeProject(project: music, resource: file, description)
 
 ## Note
 I created four concepts, UserAuthentication, TagSearch, ResourceOwnership, and Comment, that make up the important functionalities of my app. UserAuthentication is a simple yet important concept because this app needs to handle ownership of music which can only be done by users logging in. TagSearch allows the app to associate tags (which i specified as strings) with music and comments to do things like display musical classifications and filter through them when doing searches. As I state in the additional notes, it also allows users to make music private or public. ResourceOwnership is a concept to manage ownership of music. Though it has similarities with TagSearch and UserAuthentication, I chose to seperate it since they have different purposes. Comment is also a simple yet vital concept. It allows users to give feedback on others' music, and it syncs up with TagSearch to tag the feedback.
