@@ -2,7 +2,7 @@
 [back to table of contents](/assignments/assignment2/contents.md)
 
 ### Concept 1
-**concept** UserAuthentication[User]
+**concept** UserAuthentication
 
 **purpose** to identify and authenticate users so that only legitimate users can access their own accounts.
 
@@ -190,7 +190,7 @@
 **then** for each comment in comments:\
 &nbsp;&nbsp;TagSearch.getTags(object: comment) -->
 
-**sync** deleteComment\
+<!-- **sync** deleteComment\
 **when** Request.deleteComment(comment)\
 **then** Comment.removeComment(comment)
 
@@ -204,7 +204,7 @@
 
 **sync** deleteMusicTags\
 **when** ResourceOwnership.deleteRecord(record: music)\
-**then** TagSearch.deleteObject(object: music)
+**then** TagSearch.deleteObject(object: music) -->
 
 **sync** makeMusicPublic\
 **when** Request.makePublic(music)\
