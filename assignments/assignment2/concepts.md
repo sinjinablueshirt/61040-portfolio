@@ -141,12 +141,12 @@
 &nbsp;&nbsp;Request.upload(user, tags)\
 &nbsp;&nbsp;ResourceOwnership.loadResource(): (music)\
 **then**\
-&nbsp;&nbsp;TagSearch.register(object: music, tags)\
+&nbsp;&nbsp;TagSearch.register(object: music, tags+{"music"})\
 &nbsp;&nbsp;Comment.register(object: music, user)
 
 **sync** searchMusic\
 **when** Request.search(tags)\
-**then** TagSearch.matchTags(tags+{"public"}) [see notes](#additional-notes)
+**then** TagSearch.matchTags(tags+{"public", "music"}) [see notes](#additional-notes)
 
 **sync** getMusicDetails\
 **when**\
@@ -163,7 +163,7 @@
 **when**\
 &nbsp;&nbsp;Request.comment(tags)\
 &nbsp;&nbsp;Comment.addComment(): (comment)\
-**then** TagSearch.register(object: comment, tags)
+**then** TagSearch.register(object: comment, tags+{"comment"})
 
 **sync** getCommentTags\
 **when** Comment.getComments(): (comments)\
@@ -192,6 +192,8 @@
 I created four concepts, UserAuthentication, TagSearch, ResourceOwnership, and Comment, that make up the important functionalities of my app. UserAuthentication is a simple yet important concept because this app needs to handle ownership of music which can only be done by users logging in. TagSearch allows the app to associate tags (which i specified as strings) with music and comments to do things like display musical classifications and filter through them when doing searches. As I state in the additional notes, it also allows users to make music private or public. ResourceOwnership is a concept to manage ownership of music. Though it has similarities with TagSearch and UserAuthentication, I chose to seperate it since they have different purposes. Comment is also a simple yet vital concept. It allows users to give feedback on others' music, and it syncs up with TagSearch to tag the feedback.
 
 ## Additional Notes:
-1.  One big thing I wanted to point out is that when a user does a search, the search will automatically add a "public" tag to the tags the user passed in. This has the effect of only displaying matches to the users tags AND which are public. This goes well with the last few syncs which allow users to make their music private or public
+1.  One big thing I wanted to point out is that when a user does a search, the search will automatically add "public" and "music" tags to the tags the user passed in. This has the effect of only displaying matches to the users tags AND which are public. This goes well with the last few syncs which allow users to make their music private or public.
+
+2. Additionally, the inclusion of the "music" and "comment" tags amongst the syncs are a way for us to differentiate, within the TagSearch concept, between what tagged objects are music and what tagged objects are comments.
 
 [back to table of contents](/assignments/assignment2/contents.md)
