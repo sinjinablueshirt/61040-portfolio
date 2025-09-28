@@ -1,6 +1,8 @@
 # User Journey
 [back to table of contents](/assignments/assignment2/contents.md)
 
+I illustrate two short journeys to show both key user roles: a composer and a commenter.
+
 ## Pikachu's Journey (Composer)
 
 Pikachu just finished drafting his first ever piece of music, an ambitious piece that utilizes a full symphony orchestra. Pikachu wants to get feedback to improve this piece so that it not only sounds good but also feels good to play. However, his friends only play string instruments, and he doesn't know any woodwind, brass, or percussion players.
@@ -28,6 +30,6 @@ After flipping through the sheet music, Bulbasaur finds that Pikachu's percussio
 Bulbasaur ends up feeling not only accomplished for helping someone else out, but also more knowledgeable and confident about composing music for percussion players. Now that he's seen the errors that others make in percussion music, he knows to look out for them in his own work.
 
 ### Note
-I'm so sorry I couldn't really find a way to fully go over all the features of the app with only one user journey. I ended up writing two user journeys, one for composers and one for commenters. I know the end result is super long, but I hope it adequately describes the journey of the users.
+Because Reverb serves both composers and commenters, I included two journeys to illustrate the app’s features from each perspective. I know the end result is super long, but I hope it adequately describes the journey of the users.
 
 [back to table of contents](/assignments/assignment2/contents.md)
