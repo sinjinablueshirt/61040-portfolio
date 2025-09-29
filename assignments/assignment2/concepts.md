@@ -140,13 +140,13 @@
 &nbsp;&nbsp;&nbsp;&nbsp;**effects** returns all comments that the object has that were recorded after dateTime -->
 
 ## Syncs
-**sync** registerUser\
+<!-- **sync** registerUser\
 **when** Request.registerUser(username, password)\
 **then** UserAuthentication.register(username, password)
 
 **sync** login\
 **when** Request.login(username, password)\
-**then** UserAuthentication.login(username, password)
+**then** UserAuthentication.login(username, password) -->
 
 <!-- **sync** loadUsersMusic\
 **when** UserAuthentication.login(): (user)\
@@ -220,9 +220,9 @@
 &nbsp;&nbsp;ResourceOwnership.verify(record: music): ()\
 **then** TagSearch.removeTag(object: music, {"public"})
 
-**sync** editMusic\
+<!-- **sync** editMusic\
 **when** Request.editMusic(record: music, resource: file, description)\
-**then** ResourceOwnership.changeRecord(record: music, resource: file, description)
+**then** ResourceOwnership.changeRecord(record: music, resource: file, description) -->
 
 ## Note
 I created four concepts, UserAuthentication, TagSearch, ResourceOwnership, and Comment, that make up the important functionalities of my app. UserAuthentication is a simple yet important concept because this app needs to handle ownership of music which can only be done by users logging in. TagSearch allows the app to associate tags (which i specified as strings) with music and comments to do things like display musical classifications and filter through them when doing searches. As I state in the additional notes, it also allows users to make music private or public. ResourceOwnership is a concept to manage ownership of music. Though it has similarities with TagSearch and UserAuthentication, I chose to seperate it since they have different purposes. Comment is also a simple yet vital concept. It allows users to give feedback on others' music, and it syncs up with TagSearch to tag the feedback.
