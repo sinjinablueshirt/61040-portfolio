@@ -232,6 +232,4 @@ I created four concepts, UserAuthentication, TagSearch, ResourceOwnership, and C
 
 2. Additionally, the inclusion of the "music" and "comment" tags amongst the syncs are a way for us to differentiate, within the TagSearch concept, between what tagged objects are music and what tagged objects are comments.
 
-3. I think I may have added some unnecessary syncs because I'm not too sure on what to do with observer type operations :(
-
 [back to table of contents](/assignments/assignment2/contents.md)
